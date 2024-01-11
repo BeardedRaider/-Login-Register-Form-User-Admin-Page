@@ -10,6 +10,8 @@ if(isset($_POST['submit'])){
    $cpass = md5($_POST['cpassword']);
    $user_type = $_POST['user_type'];
 
+
+/* we can also use this query to check if the user already exist or not*/
    $select = " SELECT * FROM user_form2 WHERE email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
